@@ -8,6 +8,7 @@ export default function Transaction({ transaction, index }) {
         <td>{transaction.source}</td>
       </Link>
       <td>{transaction.amount}</td>
+      <td>{transaction.from}</td>
     </tr>
   );
 }

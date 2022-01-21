@@ -16,29 +16,27 @@ export default function Transactions() {
 
   return (
     <div>
-      <section>
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Source</th>
-              <th>Amount</th>
-              <th>From</th>
-            </tr>
-          </thead>
-          <tbody>
-            {transactions.map((transaction, index) => {
-              return (
-                <Transaction
-                  key={index}
-                  transaction={transaction}
-                  index={index}
-                />
-              );
-            })}
-          </tbody>
-        </table>
-      </section>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Source</th>
+            <th>Amount</th>
+            <th>From</th>
+          </tr>
+        </thead>
+        <tbody>
+          {transactions.map((transaction, index) => {
+            return (
+              <Transaction
+                key={index}
+                transaction={transaction}
+                index={index}
+              />
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }
