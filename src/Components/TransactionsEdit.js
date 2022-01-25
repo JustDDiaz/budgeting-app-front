@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import "./Style.css";
 
 export default function TransactionEdit() {
   const { index } = useParams();
@@ -32,7 +33,7 @@ export default function TransactionEdit() {
   };
 
   return (
-    <div>
+    <div className="edit-form">
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Date</label>
         <input
@@ -62,10 +63,10 @@ export default function TransactionEdit() {
           type="text"
           onChange={handleTextChange}
         />
-        <input type="submit" />
+        <input type="submit" className="form-button" />
       </form>
       <Link to={`/transactions/${index}`}>
-        <button>Back</button>
+        <button className="form-button">Back</button>
       </Link>
     </div>
   );

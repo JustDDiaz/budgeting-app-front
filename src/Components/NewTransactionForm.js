@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Style.css";
 
 export default function NewTransactionForm() {
   const URL = process.env.REACT_APP_API_URL;
@@ -28,7 +29,7 @@ export default function NewTransactionForm() {
   };
 
   return (
-    <div>
+    <div className="new-form-body">
       <h1>Add a new item</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Date</label>
@@ -64,7 +65,7 @@ export default function NewTransactionForm() {
           onChange={handleTextChange}
         />
         <br />
-        <input type="submit" />
+        <input type="submit" className="form-button" />
       </form>
     </div>
   );

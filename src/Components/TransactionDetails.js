@@ -1,6 +1,7 @@
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./Style.css";
 
 export default function TransactionDetails() {
   const [transaction, setTransaction] = useState([]);
@@ -21,8 +22,8 @@ export default function TransactionDetails() {
   };
 
   return (
-    <section>
-      <tr>
+    <section className="details">
+      <tr className="each-detail">
         <td>Date: {transaction.date}</td>
         <td>Name: {transaction.source}</td>
         <td>Amount: {transaction.amount}</td>
@@ -30,11 +31,13 @@ export default function TransactionDetails() {
       </tr>
       <div>
         <Link to={`/transactions/${index}/edit`}>
-          <button>Edit</button>
+          <button className="form-button">Edit</button>
         </Link>
       </div>
       <div>
-        <button onClick={handleDelete}>Delete</button>
+        <button onClick={handleDelete} className="form-button">
+          Delete
+        </button>
       </div>
     </section>
   );

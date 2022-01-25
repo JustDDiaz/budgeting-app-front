@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Transaction from "./Transaction";
+import "./Style.css";
 
 export default function Transactions() {
   const [transactions, setTransactions] = useState([]);
@@ -15,7 +16,7 @@ export default function Transactions() {
   }, []);
 
   return (
-    <div>
+    <div className="Transactions-body">
       <table>
         <thead>
           <tr>

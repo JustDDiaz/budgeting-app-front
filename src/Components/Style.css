@@ -1,0 +1,79 @@
+.nav {
+  display: grid;
+  padding: 0.1cm;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: rgb(148, 243, 209);
+}
+
+.button {
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.button:hover {
+  background-color: rgb(61, 174, 219);
+}
+
+.number {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.number-green {
+  background-color: rgb(137, 196, 72);
+  border-style: hidden;
+  border-radius: 5px;
+}
+
+.number-red {
+  background-color: rgb(214, 59, 59);
+  border-style: hidden;
+  border-radius: 5px;
+}
+
+.Transactions-body {
+  text-align: center;
+  display: grid;
+  padding: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.new-form-body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: grid;
+  padding: 1cm;
+}
+
+.form-button {
+  border-radius: 5px;
+}
+
+.form-button:hover {
+  background-color: rgb(61, 174, 219);
+}
+
+.details {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: grid;
+  padding: 1cm;
+}
+
+.each-detail {
+  display: grid;
+}
+
+.edit-form {
+  display: grid;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 1cm;
+}
+
+.home {
+  display: grid;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  padding: 1cm;
+}

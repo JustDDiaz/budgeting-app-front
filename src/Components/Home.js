@@ -1,3 +1,5 @@
+import "./Style.css";
+
 export default function Home() {
-  return <div>Welcome</div>;
+  return <div className="home">Welcome</div>;
 }
