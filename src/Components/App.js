@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./NavBar";
 import Home from "./Home";
 import Transactions from "./Transactions";
 import NewTransactionForm from "./NewTransactionForm";
@@ -9,7 +8,6 @@ import TransactionEdit from "./TransactionsEdit";
 function App() {
   return (
     <>
-      <NavBar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

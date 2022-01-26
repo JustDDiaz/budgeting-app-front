@@ -2,6 +2,7 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Style.css";
+import NavBar from "./NavBar";
 
 export default function TransactionDetails() {
   const [transaction, setTransaction] = useState([]);
@@ -22,23 +23,26 @@ export default function TransactionDetails() {
   };
 
   return (
-    <section className="details">
-      <tr className="each-detail">
-        <td>Date: {transaction.date}</td>
-        <td>Name: {transaction.source}</td>
-        <td>Amount: {transaction.amount}</td>
-        <td>From: {transaction.from}</td>
-      </tr>
-      <div>
-        <Link to={`/transactions/${index}/edit`}>
-          <button className="form-button">Edit</button>
-        </Link>
-      </div>
-      <div>
-        <button onClick={handleDelete} className="form-button">
-          Delete
-        </button>
-      </div>
-    </section>
+    <div>
+      <NavBar />
+      <section className="details">
+        <tr className="each-detail">
+          <td>Date: {transaction.date}</td>
+          <td>Name: {transaction.source}</td>
+          <td>Amount: {transaction.amount}</td>
+          <td>From: {transaction.from}</td>
+        </tr>
+        <div>
+          <Link to={`/transactions/${index}/edit`}>
+            <button className="form-button">Edit</button>
+          </Link>
+        </div>
+        <div>
+          <button onClick={handleDelete} className="form-button">
+            Delete
+          </button>
+        </div>
+      </section>
+    </div>
   );
 }

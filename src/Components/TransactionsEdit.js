@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import NavBar from "./NavBar";
 import "./Style.css";
 
 export default function TransactionEdit() {
@@ -33,41 +34,44 @@ export default function TransactionEdit() {
   };
 
   return (
-    <div className="edit-form">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="date">Date</label>
-        <input
-          id="date"
-          value={transaction.date}
-          type="text"
-          onChange={handleTextChange}
-        />
-        <label htmlFor="source">Source</label>
-        <input
-          id="source"
-          value={transaction.source}
-          type="text"
-          onChange={handleTextChange}
-        />
-        <label htmlFor="amount">Amount</label>
-        <input
-          id="amount"
-          value={transaction.amount}
-          type="number"
-          onChange={handleTextChange}
-        />
-        <label htmlFor="from">From</label>
-        <input
-          id="from"
-          value={transaction.from}
-          type="text"
-          onChange={handleTextChange}
-        />
-        <input type="submit" className="form-button" />
-      </form>
-      <Link to={`/transactions/${index}`}>
-        <button className="form-button">Back</button>
-      </Link>
+    <div>
+      <NavBar />
+      <div className="edit-form">
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="date">Date</label>
+          <input
+            id="date"
+            value={transaction.date}
+            type="text"
+            onChange={handleTextChange}
+          />
+          <label htmlFor="source">Source</label>
+          <input
+            id="source"
+            value={transaction.source}
+            type="text"
+            onChange={handleTextChange}
+          />
+          <label htmlFor="amount">Amount</label>
+          <input
+            id="amount"
+            value={transaction.amount}
+            type="number"
+            onChange={handleTextChange}
+          />
+          <label htmlFor="from">From</label>
+          <input
+            id="from"
+            value={transaction.from}
+            type="text"
+            onChange={handleTextChange}
+          />
+          <input type="submit" className="form-button" />
+        </form>
+        <Link to={`/transactions/${index}`}>
+          <button className="form-button">Back</button>
+        </Link>
+      </div>
     </div>
   );
 }

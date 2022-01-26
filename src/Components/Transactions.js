@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Transaction from "./Transaction";
 import "./Style.css";
+import NavBar from "./NavBar";
 
 export default function Transactions() {
   const [transactions, setTransactions] = useState([]);
@@ -16,28 +17,31 @@ export default function Transactions() {
   }, []);
 
   return (
-    <div className="Transactions-body">
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Source</th>
-            <th>Amount</th>
-            <th>From</th>
-          </tr>
-        </thead>
-        <tbody>
-          {transactions.map((transaction, index) => {
-            return (
-              <Transaction
-                key={index}
-                transaction={transaction}
-                index={index}
-              />
-            );
-          })}
-        </tbody>
-      </table>
+    <div>
+      <NavBar />
+      <div className="Transactions-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Source</th>
+              <th>Amount</th>
+              <th>From</th>
+            </tr>
+          </thead>
+          <tbody>
+            {transactions.map((transaction, index) => {
+              return (
+                <Transaction
+                  key={index}
+                  transaction={transaction}
+                  index={index}
+                />
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
